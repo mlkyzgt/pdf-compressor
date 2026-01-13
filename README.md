@@ -26,10 +26,10 @@ iki farklı kullanım senaryosu desteklenmiştir.
 ## Proje Yapısı
 
 pdf_boyut_kucultme/
-├── core.sh      # Ortak PDF sıkıştırma fonksiyonları
-├── gui.sh       # Grafik arayüz (YAD)
-├── tui.sh       # Terminal arayüzü (Whiptail)
-├── README.md    # Proje dokümantasyonu
+-core.sh      # Ortak PDF sıkıştırma fonksiyonları
+-gui.sh       # Grafik arayüz (YAD)
+-tui.sh       # Terminal arayüzü (Whiptail)
+-README.md    # Proje dokümantasyonu
 
 ## Kullanılan Teknolojiler
 
@@ -91,3 +91,6 @@ Bu yapı sayesinde kod tekrarından kaçınılmış ve modüler bir mimari elde 
 
 Proje PARDUS Linux üzerinde geliştirilmiş ve test edilmiştir.
 Bağımlılıklar doğru şekilde kurulduğunda sorunsuz çalışmaktadır.
+
+## YouTube Linki
+Projenin denemesinin yapıldığı YouTube Linkine [buradan][https://youtu.be/4toDfk44IuA?si=PGocnZVORRDCrOfQ] ulaşabilirsiniz.
