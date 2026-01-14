@@ -86,6 +86,10 @@ chmod +x core.sh gui.sh tui.sh
 
 Grafik arayüz üzerinden PDF dosyası seçilir ve sıkıştırma seviyesi belirlenir.
 
+![GUI Ekran 1](screenshots/gui1.png)
+
+![GUI Ekran 2](screenshots/gui2.png)
+
 ### Terminal Arayüzü (TUI)
 
 ```bash
@@ -93,6 +97,12 @@ Grafik arayüz üzerinden PDF dosyası seçilir ve sıkıştırma seviyesi belir
 ```
 
 Terminal tabanlı menüler kullanılarak PDF dosya yolu ve sıkıştırma seviyesi girilir.
+
+![TUI Ekran 1](screenshots/tui1.png)
+
+![TUI Ekran 2](screenshots/tui2.png)
+
+![TUI Ekran 3](screenshots/tui3.png)
 
 ## Çalışma Mantığı
 
@@ -108,5 +118,5 @@ Bağımlılıklar doğru şekilde kurulduğunda sorunsuz çalışmaktadır.
 
 ## YouTube Linki
 
-Projenin denemesinin yapıldığı YouTube videosuna  
-[buradan](https://youtu.be/4toDfk44IuA?si=PGocnZVORRDCrOfQ) ulaşabilirsiniz.
+Projenin denemesinin yapıldığı YouTube videosuna [buradan](https://youtu.be/4toDfk44IuA?si=PGocnZVORRDCrOfQ) ulaşabilirsiniz.
+
