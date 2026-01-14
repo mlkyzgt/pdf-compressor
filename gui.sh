@@ -4,7 +4,6 @@
 . ./core.sh
 
 # --- TEMA AYARI ---
-# Modern bir görünüm için GTK temasını zorlayabiliriz (Sistemde varsa)
 export GTK_THEME=Adwaita:dark
 
 # --- 1. GİRİŞ FORMU ---
