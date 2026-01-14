@@ -23,6 +23,19 @@ iki farklı kullanım senaryosu desteklenmiştir.
 - İşlem sonrası detaylı raporlama
 - Modüler kod yapısı
 
+### Sıkıştırma Seviyelerinin Teknik Karşılığı
+
+Sıkıştırma işlemleri Ghostscript’in aşağıdaki kalite profilleri kullanılarak yapılmaktadır:
+
+- **Düşük**: `/screen`  
+  En yüksek sıkıştırma oranı, en küçük dosya boyutu
+
+- **Orta**: `/ebook`  
+  Dosya boyutu ve kalite arasında dengeli yapı
+
+- **Yüksek**: `/prepress`  
+  En yüksek kalite, en düşük sıkıştırma
+
 ## Proje Yapısı
 
 ```
@@ -119,4 +132,5 @@ Bağımlılıklar doğru şekilde kurulduğunda sorunsuz çalışmaktadır.
 ## YouTube Linki
 
 Projenin denemesinin yapıldığı YouTube videosuna [buradan](https://youtu.be/4toDfk44IuA?si=PGocnZVORRDCrOfQ) ulaşabilirsiniz.
+
 
