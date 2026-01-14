@@ -25,11 +25,13 @@ iki farklı kullanım senaryosu desteklenmiştir.
 
 ## Proje Yapısı
 
+```
 pdf_boyut_kucultme/
--core.sh      # Ortak PDF sıkıştırma fonksiyonları
--gui.sh       # Grafik arayüz (YAD)
--tui.sh       # Terminal arayüzü (Whiptail)
--README.md    # Proje dokümantasyonu
+├── core.sh      # Ortak PDF sıkıştırma fonksiyonları
+├── gui.sh       # Grafik arayüz (YAD)
+├── tui.sh       # Terminal arayüzü (Whiptail)
+├── README.md    # Proje dokümantasyonu
+```
 
 ## Kullanılan Teknolojiler
 
@@ -47,36 +49,48 @@ Projenin çalışabilmesi için aşağıdaki paketlerin sistemde kurulu olması 
 - yad
 - whiptail
 
-Kurulum:
+### Paket Kurulumu
 
+```bash
 sudo apt update
 sudo apt install ghostscript yad whiptail -y
+```
 
 ## Kurulum Adımları
 
 1. Depoyu klonlayın:
 
+```bash
 git clone https://github.com/mlkyzgt/pdf_boyut_kucultme.git
+```
 
 2. Proje dizinine girin:
 
+```bash
 cd pdf_boyut_kucultme
+```
 
 3. Script dosyalarına çalıştırma izni verin:
 
+```bash
 chmod +x core.sh gui.sh tui.sh
+```
 
 ## Kullanım
 
 ### Grafik Arayüz (GUI)
 
+```bash
 ./gui.sh
+```
 
 Grafik arayüz üzerinden PDF dosyası seçilir ve sıkıştırma seviyesi belirlenir.
 
 ### Terminal Arayüzü (TUI)
 
+```bash
 ./tui.sh
+```
 
 Terminal tabanlı menüler kullanılarak PDF dosya yolu ve sıkıştırma seviyesi girilir.
 
@@ -93,4 +107,6 @@ Proje PARDUS Linux üzerinde geliştirilmiş ve test edilmiştir.
 Bağımlılıklar doğru şekilde kurulduğunda sorunsuz çalışmaktadır.
 
 ## YouTube Linki
-Projenin denemesinin yapıldığı YouTube Linkine [buradan][https://youtu.be/4toDfk44IuA?si=PGocnZVORRDCrOfQ] ulaşabilirsiniz.
+
+Projenin denemesinin yapıldığı YouTube videosuna  
+[buradan](https://youtu.be/4toDfk44IuA?si=PGocnZVORRDCrOfQ) ulaşabilirsiniz.
