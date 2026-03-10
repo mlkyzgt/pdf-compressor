@@ -1,52 +1,49 @@
-# PDF Boyut Küçültme Aracı (GUI + TUI)
+# PDF Size Reduction Tool (GUI + TUI)
 
-Bu proje, PARDUS Linux üzerinde çalışan, Ghostscript tabanlı bir PDF boyut küçültme ve optimizasyon aracıdır.
-Bash Script ile geliştirilmiştir ve hem grafik arayüz (GUI) hem de terminal arayüzü (TUI) sunmaktadır.
+This project is a Ghostscript-based PDF size reduction and optimization tool running on PARDUS Linux.
+It is developed with Bash Script and provides both a graphical user interface (GUI) and a terminal user interface (TUI).
 
-## Projenin Amacı
+## Project Purpose
 
-Bu projenin amacı, Linux ortamında PDF dosyalarının boyutunu kullanıcı dostu bir şekilde küçültebilen,
-modüler ve PARDUS uyumlu bir araç geliştirmektir.
+The purpose of this project is to develop a modular and PARDUS-compatible tool capable of reducing the size of PDF files in a user-friendly way within the Linux environment.
 
-Proje kapsamında hem grafik arayüz hem de terminal tabanlı arayüz kullanılarak
-iki farklı kullanım senaryosu desteklenmiştir.
+Within the scope of the project, two different usage scenarios are supported by utilizing both a graphical interface and a terminal-based interface.
 
-## Özellikler
+## Features
 
-- PDF dosyalarının boyutunu küçültme
-- Üç farklı sıkıştırma seviyesi:
-  - Düşük: En küçük dosya boyutu
-  - Orta: Dengeli (önerilen)
-  - Yüksek: En iyi kalite
-- Grafik arayüz (YAD)
-- Terminal arayüzü (Whiptail)
-- İşlem sonrası detaylı raporlama
-- Modüler kod yapısı
+- Reduce PDF file size
+- Three different compression levels:
+  - Low: Smallest file size
+  - Medium: Balanced (recommended)
+  - High: Best quality
+- Graphical user interface (YAD)
+- Terminal user interface (Whiptail)
+- Detailed post-processing reporting
+- Modular code structure
 
-### Sıkıştırma Seviyelerinin Teknik Karşılığı
+### Technical Equivalents of Compression Levels
 
-Sıkıştırma işlemleri Ghostscript’in aşağıdaki kalite profilleri kullanılarak yapılmaktadır:
+Compression operations are performed using the following quality profiles of Ghostscript:
 
-- **Düşük**: `/screen`  
-  En yüksek sıkıştırma oranı, en küçük dosya boyutu
+- **Low**: `/screen`  
+  Highest compression ratio, smallest file size
 
-- **Orta**: `/ebook`  
-  Dosya boyutu ve kalite arasında dengeli yapı
+- **Medium**: `/ebook`  
+  Balanced structure between file size and quality
 
-- **Yüksek**: `/prepress`  
-  En yüksek kalite, en düşük sıkıştırma
+- **High**: `/prepress`  
+  Highest quality, lowest compression
 
-## Proje Yapısı
+## Project Structure
 
-```
+```text
 pdf_boyut_kucultme/
-├── core.sh      # Ortak PDF sıkıştırma fonksiyonları
-├── gui.sh       # Grafik arayüz (YAD)
-├── tui.sh       # Terminal arayüzü (Whiptail)
-├── README.md    # Proje dokümantasyonu
-```
+├── core.sh      # Common PDF compression functions
+├── gui.sh       # Graphical user interface (YAD)
+├── tui.sh       # Terminal user interface (Whiptail)
+├── README.md    # Project documentation
 
-## Kullanılan Teknolojiler
+## Technologies Used
 
 - Bash Script
 - Ghostscript
@@ -54,62 +51,62 @@ pdf_boyut_kucultme/
 - Whiptail
 - PARDUS Linux
 
-## Gereksinimler
+## Requirements
 
-Projenin çalışabilmesi için aşağıdaki paketlerin sistemde kurulu olması gerekir:
+For the project to run, the following packages must be installed on the system:
 
 - ghostscript
 - yad
 - whiptail
 
-### Paket Kurulumu
+### Package Installation
 
 ```bash
 sudo apt update
 sudo apt install ghostscript yad whiptail -y
 ```
 
-## Kurulum Adımları
+## Installation Steps
 
-1. Depoyu klonlayın:
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/mlkyzgt/pdf_boyut_kucultme.git
 ```
 
-2. Proje dizinine girin:
+2. Enter the project directory:
 
 ```bash
 cd pdf_boyut_kucultme
 ```
 
-3. Script dosyalarına çalıştırma izni verin:
+3. Grant execution permissions to the script files:
 
 ```bash
 chmod +x core.sh gui.sh tui.sh
 ```
 
-## Kullanım
+## Usage
 
-### Grafik Arayüz (GUI)
+### Graphical User Interface (GUI)
 
 ```bash
 ./gui.sh
 ```
 
-Grafik arayüz üzerinden PDF dosyası seçilir ve sıkıştırma seviyesi belirlenir.
+A PDF file is selected, and the compression level is determined via the graphical interface.
 
 ![GUI Ekran 1](screenshots/gui1.png)
 
 ![GUI Ekran 2](screenshots/gui2.png)
 
-### Terminal Arayüzü (TUI)
+### Terminal User Interface (TUI)
 
 ```bash
 ./tui.sh
 ```
 
-Terminal tabanlı menüler kullanılarak PDF dosya yolu ve sıkıştırma seviyesi girilir.
+The PDF file path and compression level are entered using terminal-based menus.
 
 ![TUI Ekran 1](screenshots/tui1.png)
 
@@ -117,20 +114,13 @@ Terminal tabanlı menüler kullanılarak PDF dosya yolu ve sıkıştırma seviye
 
 ![TUI Ekran 3](screenshots/tui3.png)
 
-## Çalışma Mantığı
+## Working Logic
 
-PDF sıkıştırma işlemleri core.sh dosyasında bulunan ortak fonksiyonlar aracılığıyla gerçekleştirilir.
-GUI ve TUI arayüzleri yalnızca kullanıcıdan gerekli bilgileri almakta ve aynı çekirdek fonksiyonu kullanmaktadır.
+PDF compression operations are performed through common functions located in the core.sh file.
+The GUI and TUI interfaces only gather the necessary information from the user and utilize the same core function.
 
-Bu yapı sayesinde kod tekrarından kaçınılmış ve modüler bir mimari elde edilmiştir.
+Thanks to this structure, code repetition is avoided, and a modular architecture is achieved.
 
-## PARDUS Uyumluluğu
 
-Proje PARDUS Linux üzerinde geliştirilmiş ve test edilmiştir.
-Bağımlılıklar doğru şekilde kurulduğunda sorunsuz çalışmaktadır.
-
-## YouTube Linki
-
-Projenin denemesinin yapıldığı YouTube videosuna [buradan](https://youtu.be/4toDfk44IuA?si=PGocnZVORRDCrOfQ) ulaşabilirsiniz.
 
 
